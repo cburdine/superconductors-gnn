@@ -4,6 +4,9 @@ FROM pytorch/pytorch:1.12.0-cuda11.3-cudnn8-runtime
 RUN mkdir /sc-gnn/
 WORKDIR /sc-gnn/
 
+# show python version:
+RUN python3 --version
+
 # update pip & install packages:
 COPY ./requirements.txt /requirements.txt
 RUN pip3 install --upgrade pip
